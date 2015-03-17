@@ -1,0 +1,17 @@
+<apex:page controller="Expendcls">
+  <apex:form id="fm">
+      <apex:pageBlock >
+       <apex:pageBlockSection title="End User Page">
+         <apex:inputField value="{!exp.Expd_SoldTo__c}"/>
+         <apex:inputField value="{!exp.Language__c}"/>
+        </apex:pageBlockSection> 
+         <apex:commandButton value="CreateAccount" action="{!craeteaccount}" reRender="fm"/>
+         
+      </apex:pageBlock>
+     <apex:pageBlock > 
+      <apex:pageBlockTable value="{!lisacn}" var="acn" id="pb"> 
+            <apex:column value="{!acn.name}"/>
+         </apex:pageBlockTable>
+       </apex:pageBlock>  
+  </apex:form>
+</apex:page>

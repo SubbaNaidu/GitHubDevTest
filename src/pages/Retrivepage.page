@@ -1,0 +1,25 @@
+<apex:page controller="RetriveRecordsCustom">
+ <script>
+   function call(){
+     var del=confirm('Record is Selected');
+     return del;
+   }
+ </script>
+  <apex:form > 
+     <apex:pageBlock >
+      <apex:inputtext value="{!SearchRec}"/>
+      <apex:commandButton value="Selected" onclick="return delcheck();" />
+      <apex:commandButton value="Search" action="{!searchRecord}" reRender="pt"/>
+      <apex:pageblockTable value="{!lst}"  var="acn" id="pt">
+        
+        <apex:column >
+          <input type="radio" onclick="alert('account is selected')"/>
+        </apex:column>
+        <apex:column headerValue="AccName">
+           <apex:commandLink value="{!acn.name}" action="/{!acn.Id}"/>
+        </apex:column>  
+        <apex:column value="{!acn.Phone}"/>    
+      </apex:pageblocktable>
+      </apex:pageBlock>      
+  </apex:form>
+</apex:page>

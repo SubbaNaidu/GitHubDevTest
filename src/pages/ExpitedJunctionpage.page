@@ -1,0 +1,25 @@
+<apex:page controller="ExpitedJunctionpage">
+  <apex:form >
+  <apex:pageBlock >
+    <apex:outputLabel >OPPORTUNITY SELECT</apex:outputLabel> <br/>
+     <apex:selectList value="{!selop}" size="1">
+        <apex:actionSupport event="onclick" action="{!showdates}" reRender="fm"/>
+        <apex:selectOptions value="{!lisopn}"/>
+     </apex:selectList> 
+  
+   </apex:pageBlock>
+   
+   <apex:pageBlock >
+      <apex:pageBlockTable value="{!lit}" var="acc" id="fm">
+       <apex:column >
+        <input type="radio" />
+         
+       </apex:column>  
+         <apex:column value="{!acc.DeleteObject1__r.Labor_Catogiries__c}"/>
+         <apex:column value="{!acc.startdate__c}"/>
+         <apex:column value="{!acc.End_Date__c }"/> 
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

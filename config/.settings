@@ -1,0 +1,19 @@
+{
+    "username": "venkat.subbu222@sfdc.com", 
+    "environment": "production", 
+    "project_name": "GitHubTestDev", 
+    "workspace": "C:\\Lexmark", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "IINOXPXU3PJLLAHH3LG9AQI50NMPNIS3", 
+    "metadata_container": "1dc280000004csUAAQ", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "HomePageComponent", 
+        "Profile", 
+        "Scontrol"
+    ]
+}

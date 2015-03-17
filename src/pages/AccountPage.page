@@ -1,0 +1,31 @@
+<apex:page controller="AccountCls">
+   <apex:form >
+      <apex:pageBlock rendered="{!pbs}">
+         <apex:pageblockTable value="{!li}" var="acn">
+            <apex:column >
+              <apex:commandLink value="Edit" action="{!edit}">
+              <apex:param value="{!acn.name}" assignTo="{!sname}" name="aaa"/>
+              <apex:param value="{!acn.id}" assignTo="{!acnid}" name="bbb"/>
+              </apex:commandLink>
+            </apex:column>
+             <apex:column value="{!acn.name}"/>
+              <apex:column value="{!acn.phone}"/>
+         </apex:pageblockTable>
+       </apex:pageBlock>
+       
+       <apex:pageBlock rendered="{!pbbl}">
+        <apex:pageBlockButtons >
+       <apex:commandButton value="Save" rendered="{!show}" action="{!save}"/>
+       <apex:commandButton value="Save&New" rendered="{!show2}" action="{!savenew}"/>
+       <apex:commandButton value="Cancel" rendered="{!show1}"/>
+      </apex:pageBlockButtons>  
+      
+        <apex:pageBlockSection >
+         <apex:inputfield value="{!acn.name}"/>
+         <apex:inputfield value="{!acn.phone}"/>
+        </apex:pageBlockSection> 
+       </apex:pageBlock>
+     
+      
+   </apex:form>
+</apex:page>

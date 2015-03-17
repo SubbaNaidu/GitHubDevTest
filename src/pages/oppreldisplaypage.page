@@ -1,0 +1,28 @@
+<apex:page standardController="opportunity" extensions="oppreldisplaycls">
+  <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+              <apex:pageBlockTable value="{!Lit}" var="li" id="pb">
+        
+                 <apex:column value="{!li.Labor_Category__c}" headerValue="Labour Category"/>
+                 <apex:column value="{!li.Start_Date__c}" headerValue="Start Date"/>
+                 <apex:column value="{!li.End_Date__c }" headerValue="End Date"/> 
+              </apex:pageBlockTable>
+              <table>
+              <tr>
+              <th colspan="4">January2015</th>
+              <tr>
+              <td>w1</td>           
+              <td>w2</td>                
+              <td>w3</td>             
+              <td>w4</td>
+              </tr>
+              </tr>
+               
+              
+              </table>
+              
+          </apex:pageBlockSection>
+      </apex:pageBlock>  
+  </apex:form>
+</apex:page>
